@@ -36,15 +36,10 @@ export default function Clients() {
       if (error) throw error;
       setClients(data || []);
       
-      // Audit logging for bulk client data access
-      if (data && data.length > 50) {
-        await supabase.from("audit_logs").insert({
-          user_id: session.user.id,
-          action: "BULK_CLIENT_VIEW",
-          table_name: "clients",
-          record_count: data.length,
-        }).catch(err => console.error("Audit log error:", err));
-      }
+      // TODO: Audit logging for bulk client data access (requires audit_logs table)
+      // if (data && data.length > 50) {
+      //   console.log("Bulk client access detected:", data.length, "records");
+      // }
     } catch (error: any) {
       toast.error(getSafeErrorMessage(error));
     } finally {
