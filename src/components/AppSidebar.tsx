@@ -1,4 +1,4 @@
-import { LayoutDashboard, ClipboardList, Users, TrendingUp, Settings, LogOut, Clock } from "lucide-react";
+import { LayoutDashboard, ClipboardList, Users, Wrench, TrendingUp, Settings, LogOut, Clock } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -23,6 +23,7 @@ const menuItems = [
   { title: "menu.dashboard", url: "/dashboard", icon: LayoutDashboard },
   { title: "menu.orders", url: "/orders", icon: ClipboardList },
   { title: "menu.clients", url: "/clients", icon: Users },
+  { title: "menu.services", url: "/services", icon: Wrench },
   { title: "menu.analytics", url: "/analytics", icon: TrendingUp },
   { title: "menu.shifts", url: "/shifts", icon: Clock },
   { title: "menu.settings", url: "/settings", icon: Settings },

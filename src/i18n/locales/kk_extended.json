@@ -1,0 +1,69 @@
+{
+  "orders": {
+    "create": "Тапсырыс жасау",
+    "edit": "Тапсырысты өңдеу",
+    "client": "Клиент",
+    "selectClient": "Клиентті таңдаңыз",
+    "status": {
+      "title": "Күйі",
+      "pending": "Күтуде",
+      "inProgress": "Орындалуда",
+      "completed": "Аяқталды"
+    },
+    "services": "Қызметтер",
+    "addService": "Қызмет қосу",
+    "total": "Барлығы",
+    "notes": "Ескертпелер",
+    "notesPlaceholder": "Қосымша ақпарат...",
+    "validation": {
+      "required": "Барлық міндетті өрістерді толтырыңыз"
+    },
+    "created": "Тапсырыс жасалды",
+    "updated": "Тапсырыс жаңартылды"
+  },
+  "clients": {
+    "create": "Клиент қосу",
+    "edit": "Клиентті өңдеу",
+    "fullName": "Толық аты",
+    "fullNamePlaceholder": "Атын енгізіңіз",
+    "phone": "Телефон",
+    "carModel": "Автомобиль моделі",
+    "carModelPlaceholder": "Toyota Camry",
+    "carNumber": "Мемлекеттік нөмір",
+    "notes": "Ескертпелер",
+    "notesPlaceholder": "Клиент туралы қосымша ақпарат",
+    "validation": {
+      "required": "Аты мен телефоны міндетті"
+    },
+    "created": "Клиент қосылды",
+    "updated": "Клиент жаңартылды",
+    "history": "Қызмет көрсету тарихы",
+    "totalOrders": "Барлығы тапсырыстар"
+  },
+  "services": {
+    "title": "Қызметтер",
+    "create": "Қызмет қосу",
+    "edit": "Қызметті өңдеу",
+    "name": "Атауы",
+    "namePlaceholder": "Майды ауыстыру",
+    "category": "Категория",
+    "categoryPlaceholder": "Категорияны таңдаңыз",
+    "categories": {
+      "maintenance": "ТҚ",
+      "repair": "Жөндеу",
+      "diagnostics": "Диагностика",
+      "bodywork": "Кузов жөндеу",
+      "tires": "Шиномонтаж",
+      "other": "Басқа"
+    },
+    "price": "Бағасы (₸)",
+    "duration": "Ұзақтығы (минут)",
+    "durationPlaceholder": "60",
+    "active": "Белсенді",
+    "validation": {
+      "required": "Атауы мен бағасы міндетті"
+    },
+    "created": "Қызмет қосылды",
+    "updated": "Қызмет жаңартылды"
+  }
+}

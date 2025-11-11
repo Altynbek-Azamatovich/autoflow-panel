@@ -7,6 +7,7 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import Orders from "./pages/Orders";
 import Clients from "./pages/Clients";
+import Services from "./pages/Services";
 import Analytics from "./pages/Analytics";
 import Shifts from "./pages/Shifts";
 import Settings from "./pages/Settings";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/clients" element={<Clients />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/shifts" element={<Shifts />} />
           <Route path="/settings" element={<Settings />} />

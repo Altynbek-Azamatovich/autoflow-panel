@@ -1,0 +1,69 @@
+{
+  "orders": {
+    "create": "Создать заказ",
+    "edit": "Редактировать заказ",
+    "client": "Клиент",
+    "selectClient": "Выберите клиента",
+    "status": {
+      "title": "Статус",
+      "pending": "Ожидает",
+      "inProgress": "В работе",
+      "completed": "Завершён"
+    },
+    "services": "Услуги",
+    "addService": "Добавить услугу",
+    "total": "Итого",
+    "notes": "Примечания",
+    "notesPlaceholder": "Дополнительная информация...",
+    "validation": {
+      "required": "Заполните все обязательные поля"
+    },
+    "created": "Заказ создан",
+    "updated": "Заказ обновлён"
+  },
+  "clients": {
+    "create": "Добавить клиента",
+    "edit": "Редактировать клиента",
+    "fullName": "Полное имя",
+    "fullNamePlaceholder": "Введите имя",
+    "phone": "Телефон",
+    "carModel": "Модель автомобиля",
+    "carModelPlaceholder": "Toyota Camry",
+    "carNumber": "Гос. номер",
+    "notes": "Примечания",
+    "notesPlaceholder": "Дополнительная информация о клиенте",
+    "validation": {
+      "required": "Имя и телефон обязательны"
+    },
+    "created": "Клиент добавлен",
+    "updated": "Клиент обновлён",
+    "history": "История обслуживания",
+    "totalOrders": "Всего заказов"
+  },
+  "services": {
+    "title": "Услуги",
+    "create": "Добавить услугу",
+    "edit": "Редактировать услугу",
+    "name": "Название",
+    "namePlaceholder": "Замена масла",
+    "category": "Категория",
+    "categoryPlaceholder": "Выберите категорию",
+    "categories": {
+      "maintenance": "ТО",
+      "repair": "Ремонт",
+      "diagnostics": "Диагностика",
+      "bodywork": "Кузовной ремонт",
+      "tires": "Шиномонтаж",
+      "other": "Другое"
+    },
+    "price": "Цена (₸)",
+    "duration": "Длительность (минут)",
+    "durationPlaceholder": "60",
+    "active": "Активна",
+    "validation": {
+      "required": "Название и цена обязательны"
+    },
+    "created": "Услуга добавлена",
+    "updated": "Услуга обновлена"
+  }
+}

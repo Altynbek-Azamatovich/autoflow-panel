@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "AutoService Pro",
+    "name": "myAuto Pro",
     "subtitle": "Управление сервисом"
   },
   "auth": {
@@ -26,6 +26,7 @@
     "dashboard": "Главная",
     "orders": "Заказы",
     "clients": "Клиенты",
+    "services": "Услуги",
     "analytics": "Аналитика",
     "shifts": "Смены",
     "settings": "Настройки",
@@ -59,30 +60,27 @@
     "new": "Новый заказ",
     "search": "Поиск по клиенту, автомобилю или услуге...",
     "orderNumber": "Заказ",
+    "create": "Создать заказ",
+    "edit": "Редактировать заказ",
+    "client": "Клиент",
+    "selectClient": "Выберите клиента",
     "status": {
+      "title": "Статус",
       "inProgress": "В работе",
       "pending": "Ожидает",
       "completed": "Завершён",
       "cancelled": "Отменён"
     },
-    "open": "Открыть",
-    "client": "Клиент",
-    "car": "Автомобиль",
-    "service": "Услуга",
-    "price": "Цена",
-    "create": "Создать заказ",
-    "edit": "Редактировать",
-    "delete": "Удалить",
-    "form": {
-      "clientName": "Имя клиента",
-      "clientPhone": "Телефон",
-      "carModel": "Модель автомобиля",
-      "carNumber": "Гос. номер",
-      "selectServices": "Выбрать услуги",
-      "notes": "Примечания",
-      "save": "Сохранить",
-      "cancel": "Отменить"
-    }
+    "services": "Услуги",
+    "addService": "Добавить услугу",
+    "total": "Итого",
+    "notes": "Примечания",
+    "notesPlaceholder": "Дополнительная информация...",
+    "validation": {
+      "required": "Заполните все обязательные поля"
+    },
+    "created": "Заказ создан",
+    "updated": "Заказ обновлён"
   },
   "clients": {
     "title": "Клиенты",
@@ -92,37 +90,55 @@
     "visits": "визит",
     "phone": "Телефон",
     "car": "Автомобиль",
-    "lastVisit": "Последний визит",
-    "totalSpent": "Всего потрачено"
+    "create": "Добавить клиента",
+    "edit": "Редактировать клиента",
+    "fullName": "Полное имя",
+    "fullNamePlaceholder": "Введите имя",
+    "carModel": "Модель автомобиля",
+    "carModelPlaceholder": "Toyota Camry",
+    "carNumber": "Гос. номер",
+    "notes": "Примечания",
+    "notesPlaceholder": "Дополнительная информация о клиенте",
+    "validation": {
+      "required": "Имя и телефон обязательны"
+    },
+    "created": "Клиент добавлен",
+    "updated": "Клиент обновлён"
+  },
+  "services": {
+    "title": "Услуги",
+    "create": "Добавить услугу",
+    "edit": "Редактировать услугу",
+    "name": "Название",
+    "namePlaceholder": "Замена масла",
+    "category": "Категория",
+    "categoryPlaceholder": "Выберите категорию",
+    "categories": {
+      "maintenance": "ТО",
+      "repair": "Ремонт",
+      "diagnostics": "Диагностика",
+      "bodywork": "Кузовной ремонт",
+      "tires": "Шиномонтаж",
+      "other": "Другое"
+    },
+    "price": "Цена (₸)",
+    "duration": "Длительность (минут)",
+    "durationPlaceholder": "60",
+    "active": "Активна",
+    "validation": {
+      "required": "Название и цена обязательны"
+    },
+    "created": "Услуга добавлена",
+    "updated": "Услуга обновлена"
   },
   "analytics": {
     "title": "Аналитика",
-    "subtitle": "Статистика и отчёты",
-    "period": {
-      "today": "Сегодня",
-      "week": "Неделя",
-      "month": "Месяц",
-      "year": "Год"
-    },
-    "revenue": "Выручка",
-    "orders": "Заказы",
-    "newClients": "Новые клиенты",
-    "avgCheck": "Средний чек",
-    "topServices": "Топ услуги",
-    "masterWorkload": "Загрузка мастеров"
+    "subtitle": "Статистика и отчёты"
   },
   "shifts": {
     "title": "Смены",
     "subtitle": "Управление сменами",
-    "current": "Текущая смена",
-    "history": "История смен",
-    "employee": "Сотрудник",
-    "date": "Дата",
-    "time": "Время",
-    "ordersProcessed": "Обработано заказов",
-    "revenue": "Выручка",
-    "open": "Открыть",
-    "close": "Закрыть"
+    "employee": "Сотрудник"
   },
   "settings": {
     "title": "Настройки",
@@ -149,13 +165,9 @@
     "edit": "Редактировать",
     "add": "Добавить",
     "search": "Поиск",
-    "filter": "Фильтр",
-    "export": "Экспорт",
-    "import": "Импорт",
     "loading": "Загрузка...",
     "error": "Ошибка",
     "success": "Успешно",
-    "confirm": "Подтвердить",
     "yes": "Да",
     "no": "Нет"
   }

@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "AutoService Pro",
+    "name": "myAuto Pro",
     "subtitle": "Сервисті басқару"
   },
   "auth": {
@@ -26,6 +26,7 @@
     "dashboard": "Басты бет",
     "orders": "Тапсырыстар",
     "clients": "Клиенттер",
+    "services": "Қызметтер",
     "analytics": "Аналитика",
     "shifts": "Ауысымдар",
     "settings": "Баптаулар",
@@ -59,30 +60,27 @@
     "new": "Жаңа тапсырыс",
     "search": "Клиент, автомобиль немесе қызмет бойынша іздеу...",
     "orderNumber": "Тапсырыс",
+    "create": "Тапсырыс жасау",
+    "edit": "Тапсырысты өңдеу",
+    "client": "Клиент",
+    "selectClient": "Клиентті таңдаңыз",
     "status": {
+      "title": "Күйі",
       "inProgress": "Орындалуда",
       "pending": "Күтуде",
       "completed": "Аяқталды",
       "cancelled": "Болдырылмады"
     },
-    "open": "Ашу",
-    "client": "Клиент",
-    "car": "Автомобиль",
-    "service": "Қызмет",
-    "price": "Бағасы",
-    "create": "Тапсырыс жасау",
-    "edit": "Өңдеу",
-    "delete": "Жою",
-    "form": {
-      "clientName": "Клиенттің аты",
-      "clientPhone": "Телефон",
-      "carModel": "Автомобиль моделі",
-      "carNumber": "Мемлекеттік нөмір",
-      "selectServices": "Қызметтерді таңдау",
-      "notes": "Ескертпелер",
-      "save": "Сақтау",
-      "cancel": "Болдырмау"
-    }
+    "services": "Қызметтер",
+    "addService": "Қызмет қосу",
+    "total": "Барлығы",
+    "notes": "Ескертпелер",
+    "notesPlaceholder": "Қосымша ақпарат...",
+    "validation": {
+      "required": "Барлық міндетті өрістерді толтырыңыз"
+    },
+    "created": "Тапсырыс жасалды",
+    "updated": "Тапсырыс жаңартылды"
   },
   "clients": {
     "title": "Клиенттер",
@@ -92,37 +90,55 @@
     "visits": "келу",
     "phone": "Телефон",
     "car": "Автомобиль",
-    "lastVisit": "Соңғы келу",
-    "totalSpent": "Жалпы сома"
+    "create": "Клиент қосу",
+    "edit": "Клиентті өңдеу",
+    "fullName": "Толық аты",
+    "fullNamePlaceholder": "Атын енгізіңіз",
+    "carModel": "Автомобиль моделі",
+    "carModelPlaceholder": "Toyota Camry",
+    "carNumber": "Мемлекеттік нөмір",
+    "notes": "Ескертпелер",
+    "notesPlaceholder": "Клиент туралы қосымша ақпарат",
+    "validation": {
+      "required": "Аты мен телефоны міндетті"
+    },
+    "created": "Клиент қосылды",
+    "updated": "Клиент жаңартылды"
+  },
+  "services": {
+    "title": "Қызметтер",
+    "create": "Қызмет қосу",
+    "edit": "Қызметті өңдеу",
+    "name": "Атауы",
+    "namePlaceholder": "Майды ауыстыру",
+    "category": "Категория",
+    "categoryPlaceholder": "Категорияны таңдаңыз",
+    "categories": {
+      "maintenance": "ТҚ",
+      "repair": "Жөндеу",
+      "diagnostics": "Диагностика",
+      "bodywork": "Кузов жөндеу",
+      "tires": "Шиномонтаж",
+      "other": "Басқа"
+    },
+    "price": "Бағасы (₸)",
+    "duration": "Ұзақтығы (минут)",
+    "durationPlaceholder": "60",
+    "active": "Белсенді",
+    "validation": {
+      "required": "Атауы мен бағасы міндетті"
+    },
+    "created": "Қызмет қосылды",
+    "updated": "Қызмет жаңартылды"
   },
   "analytics": {
     "title": "Аналитика",
-    "subtitle": "Статистика және есептер",
-    "period": {
-      "today": "Бүгін",
-      "week": "Апта",
-      "month": "Ай",
-      "year": "Жыл"
-    },
-    "revenue": "Табыс",
-    "orders": "Тапсырыстар",
-    "newClients": "Жаңа клиенттер",
-    "avgCheck": "Орташа чек",
-    "topServices": "Топ қызметтер",
-    "masterWorkload": "Шеберлердің жүктемесі"
+    "subtitle": "Статистика және есептер"
   },
   "shifts": {
     "title": "Ауысымдар",
     "subtitle": "Ауысымдарды басқару",
-    "current": "Ағымдағы ауысым",
-    "history": "Ауысымдар тарихы",
-    "employee": "Қызметкер",
-    "date": "Күні",
-    "time": "Уақыт",
-    "ordersProcessed": "Орындалған тапсырыстар",
-    "revenue": "Табыс",
-    "open": "Ашу",
-    "close": "Жабу"
+    "employee": "Қызметкер"
   },
   "settings": {
     "title": "Баптаулар",
@@ -149,13 +165,9 @@
     "edit": "Өңдеу",
     "add": "Қосу",
     "search": "Іздеу",
-    "filter": "Сүзгі",
-    "export": "Экспорт",
-    "import": "Импорт",
     "loading": "Жүктелуде...",
     "error": "Қате",
     "success": "Сәтті",
-    "confirm": "Растау",
     "yes": "Иә",
     "no": "Жоқ"
   }
