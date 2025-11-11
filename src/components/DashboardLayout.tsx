@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { supabase } from "@/integrations/supabase/client";
 import { Session } from "@supabase/supabase-js";
 
@@ -57,9 +58,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <div className="min-h-screen flex w-full bg-background">
         <AppSidebar />
         <div className="flex-1 flex flex-col">
-          <header className="h-16 border-b border-border flex items-center px-4 gap-4 bg-card">
+          <header className="h-16 border-b border-border flex items-center justify-between px-6 bg-card">
             <SidebarTrigger />
-            <div className="flex-1" />
+            <LanguageSwitcher />
           </header>
           <main className="flex-1 p-6 overflow-auto">{children}</main>
         </div>

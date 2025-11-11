@@ -1,6 +1,7 @@
 import { LayoutDashboard, ClipboardList, Users, TrendingUp, Settings, LogOut, Clock } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import {
   Sidebar,
   SidebarContent,
@@ -17,26 +18,28 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "./ui/button";
 import { toast } from "sonner";
 
+
 const menuItems = [
-  { title: "Главная", url: "/dashboard", icon: LayoutDashboard },
-  { title: "Заказы", url: "/orders", icon: ClipboardList },
-  { title: "Клиенты", url: "/clients", icon: Users },
-  { title: "Аналитика", url: "/analytics", icon: TrendingUp },
-  { title: "Смены", url: "/shifts", icon: Clock },
-  { title: "Настройки", url: "/settings", icon: Settings },
+  { title: "menu.dashboard", url: "/dashboard", icon: LayoutDashboard },
+  { title: "menu.orders", url: "/orders", icon: ClipboardList },
+  { title: "menu.clients", url: "/clients", icon: Users },
+  { title: "menu.analytics", url: "/analytics", icon: TrendingUp },
+  { title: "menu.shifts", url: "/shifts", icon: Clock },
+  { title: "menu.settings", url: "/settings", icon: Settings },
 ];
 
 export function AppSidebar() {
   const location = useLocation();
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const currentPath = location.pathname;
 
   const handleLogout = async () => {
     const { error } = await supabase.auth.signOut();
     if (error) {
-      toast.error("Ошибка при выходе");
+      toast.error(t("common.error"));
     } else {
-      toast.success("Вы вышли из системы");
+      toast.success(t("menu.logout"));
       navigate("/auth");
     }
   };
@@ -45,19 +48,19 @@ export function AppSidebar() {
     <Sidebar className="border-r border-border">
       <SidebarHeader className="border-b border-border p-4">
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-orange-600 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center">
             <span className="text-white font-bold text-lg">A</span>
           </div>
           <div>
             <h2 className="font-semibold text-foreground">AutoService</h2>
-            <p className="text-xs text-muted-foreground">Управление сервисом</p>
+            <p className="text-xs text-muted-foreground">{t("app.subtitle")}</p>
           </div>
         </div>
       </SidebarHeader>
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Меню</SidebarGroupLabel>
+          <SidebarGroupLabel>{t("menu.dashboard")}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => (
@@ -69,7 +72,7 @@ export function AppSidebar() {
                       activeClassName="bg-sidebar-accent text-primary font-medium"
                     >
                       <item.icon className="h-5 w-5" />
-                      <span>{item.title}</span>
+                      <span>{t(item.title)}</span>
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -86,7 +89,7 @@ export function AppSidebar() {
           onClick={handleLogout}
         >
           <LogOut className="h-5 w-5" />
-          <span>Выход</span>
+          <span>{t("menu.logout")}</span>
         </Button>
       </SidebarFooter>
     </Sidebar>
