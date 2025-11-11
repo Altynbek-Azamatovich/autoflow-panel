@@ -1,0 +1,162 @@
+{
+  "app": {
+    "name": "AutoService Pro",
+    "subtitle": "Управление сервисом"
+  },
+  "auth": {
+    "login": "Вход",
+    "signup": "Регистрация",
+    "phone": "Номер телефона",
+    "phonePlaceholder": "+7 (___) ___-__-__",
+    "password": "Пароль",
+    "passwordPlaceholder": "••••••••",
+    "loginButton": "Войти",
+    "signupButton": "Зарегистрироваться",
+    "loading": "Загрузка...",
+    "welcome": "Добро пожаловать!",
+    "signupSuccess": "Регистрация успешна! Используйте свой номер для входа.",
+    "loginTitle": "Вход",
+    "signupTitle": "Регистрация",
+    "loginDescription": "Войдите в свой аккаунт для продолжения",
+    "signupDescription": "Создайте новый аккаунт для начала работы",
+    "noAccount": "Нет аккаунта? Зарегистрируйтесь",
+    "hasAccount": "Уже есть аккаунт? Войдите"
+  },
+  "menu": {
+    "dashboard": "Главная",
+    "orders": "Заказы",
+    "clients": "Клиенты",
+    "analytics": "Аналитика",
+    "shifts": "Смены",
+    "settings": "Настройки",
+    "logout": "Выход"
+  },
+  "dashboard": {
+    "title": "Главная",
+    "subtitle": "Рабочая панель и статистика",
+    "shift": {
+      "open": "Открыть смену",
+      "close": "Закрыть смену",
+      "opened": "Смена открыта",
+      "closed": "Смена закрыта"
+    },
+    "stats": {
+      "activeOrders": "Активные заказы",
+      "clients": "Клиенты",
+      "dailyRevenue": "Дневная выручка",
+      "shiftTime": "Время смены"
+    },
+    "recentOrders": "Последние заказы",
+    "viewAll": "Посмотреть все",
+    "quickActions": "Быстрые действия",
+    "newOrder": "Новый заказ",
+    "addClient": "Добавить клиента",
+    "viewAnalytics": "Аналитика"
+  },
+  "orders": {
+    "title": "Заказы",
+    "subtitle": "Управление заказами",
+    "new": "Новый заказ",
+    "search": "Поиск по клиенту, автомобилю или услуге...",
+    "orderNumber": "Заказ",
+    "status": {
+      "inProgress": "В работе",
+      "pending": "Ожидает",
+      "completed": "Завершён",
+      "cancelled": "Отменён"
+    },
+    "open": "Открыть",
+    "client": "Клиент",
+    "car": "Автомобиль",
+    "service": "Услуга",
+    "price": "Цена",
+    "create": "Создать заказ",
+    "edit": "Редактировать",
+    "delete": "Удалить",
+    "form": {
+      "clientName": "Имя клиента",
+      "clientPhone": "Телефон",
+      "carModel": "Модель автомобиля",
+      "carNumber": "Гос. номер",
+      "selectServices": "Выбрать услуги",
+      "notes": "Примечания",
+      "save": "Сохранить",
+      "cancel": "Отменить"
+    }
+  },
+  "clients": {
+    "title": "Клиенты",
+    "subtitle": "Клиентская база",
+    "add": "Добавить клиента",
+    "search": "Поиск...",
+    "visits": "визит",
+    "phone": "Телефон",
+    "car": "Автомобиль",
+    "lastVisit": "Последний визит",
+    "totalSpent": "Всего потрачено"
+  },
+  "analytics": {
+    "title": "Аналитика",
+    "subtitle": "Статистика и отчёты",
+    "period": {
+      "today": "Сегодня",
+      "week": "Неделя",
+      "month": "Месяц",
+      "year": "Год"
+    },
+    "revenue": "Выручка",
+    "orders": "Заказы",
+    "newClients": "Новые клиенты",
+    "avgCheck": "Средний чек",
+    "topServices": "Топ услуги",
+    "masterWorkload": "Загрузка мастеров"
+  },
+  "shifts": {
+    "title": "Смены",
+    "subtitle": "Управление сменами",
+    "current": "Текущая смена",
+    "history": "История смен",
+    "employee": "Сотрудник",
+    "date": "Дата",
+    "time": "Время",
+    "ordersProcessed": "Обработано заказов",
+    "revenue": "Выручка",
+    "open": "Открыть",
+    "close": "Закрыть"
+  },
+  "settings": {
+    "title": "Настройки",
+    "subtitle": "Конфигурация сервиса",
+    "serviceName": "Название сервиса",
+    "serviceNamePlaceholder": "Мой автосервис",
+    "address": "Адрес",
+    "addressPlaceholder": "г. Алматы, пр. Абая 1",
+    "phone": "Телефон",
+    "phonePlaceholder": "+7 (___) ___-__-__",
+    "workplaces": "Количество рабочих мест",
+    "workingHours": "Время работы",
+    "from": "с",
+    "to": "до",
+    "notifications": "Уведомления",
+    "newOrders": "Уведомлять о новых заказах",
+    "completedOrders": "Уведомлять о завершённых заказах",
+    "save": "Сохранить"
+  },
+  "common": {
+    "save": "Сохранить",
+    "cancel": "Отменить",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "add": "Добавить",
+    "search": "Поиск",
+    "filter": "Фильтр",
+    "export": "Экспорт",
+    "import": "Импорт",
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "success": "Успешно",
+    "confirm": "Подтвердить",
+    "yes": "Да",
+    "no": "Нет"
+  }
+}

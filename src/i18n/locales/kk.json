@@ -1,0 +1,162 @@
+{
+  "app": {
+    "name": "AutoService Pro",
+    "subtitle": "Сервисті басқару"
+  },
+  "auth": {
+    "login": "Кіру",
+    "signup": "Тіркелу",
+    "phone": "Телефон нөмірі",
+    "phonePlaceholder": "+7 (___) ___-__-__",
+    "password": "Құпия сөз",
+    "passwordPlaceholder": "••••••••",
+    "loginButton": "Кіру",
+    "signupButton": "Тіркелу",
+    "loading": "Жүктелуде...",
+    "welcome": "Қош келдіңіз!",
+    "signupSuccess": "Тіркелу сәтті! Кіру үшін номеріңізді пайдаланыңыз.",
+    "loginTitle": "Кіру",
+    "signupTitle": "Тіркелу",
+    "loginDescription": "Жалғастыру үшін аккаунтқа кіріңіз",
+    "signupDescription": "Жұмысты бастау үшін жаңа аккаунт жасаңыз",
+    "noAccount": "Аккаунт жоқ па? Тіркелу",
+    "hasAccount": "Аккаунтыңыз бар ма? Кіру"
+  },
+  "menu": {
+    "dashboard": "Басты бет",
+    "orders": "Тапсырыстар",
+    "clients": "Клиенттер",
+    "analytics": "Аналитика",
+    "shifts": "Ауысымдар",
+    "settings": "Баптаулар",
+    "logout": "Шығу"
+  },
+  "dashboard": {
+    "title": "Басты бет",
+    "subtitle": "Жұмыс панелі және статистика",
+    "shift": {
+      "open": "Ауысымды ашу",
+      "close": "Ауысымды жабу",
+      "opened": "Ауысым ашық",
+      "closed": "Ауысым жабық"
+    },
+    "stats": {
+      "activeOrders": "Белсенді тапсырыстар",
+      "clients": "Клиенттер",
+      "dailyRevenue": "Күнлік табыс",
+      "shiftTime": "Ауысым уақыты"
+    },
+    "recentOrders": "Соңғы тапсырыстар",
+    "viewAll": "Барлығын көру",
+    "quickActions": "Жылдам әрекеттер",
+    "newOrder": "Жаңа тапсырыс",
+    "addClient": "Клиент қосу",
+    "viewAnalytics": "Аналитика"
+  },
+  "orders": {
+    "title": "Тапсырыстар",
+    "subtitle": "Тапсырыстарды басқару",
+    "new": "Жаңа тапсырыс",
+    "search": "Клиент, автомобиль немесе қызмет бойынша іздеу...",
+    "orderNumber": "Тапсырыс",
+    "status": {
+      "inProgress": "Орындалуда",
+      "pending": "Күтуде",
+      "completed": "Аяқталды",
+      "cancelled": "Болдырылмады"
+    },
+    "open": "Ашу",
+    "client": "Клиент",
+    "car": "Автомобиль",
+    "service": "Қызмет",
+    "price": "Бағасы",
+    "create": "Тапсырыс жасау",
+    "edit": "Өңдеу",
+    "delete": "Жою",
+    "form": {
+      "clientName": "Клиенттің аты",
+      "clientPhone": "Телефон",
+      "carModel": "Автомобиль моделі",
+      "carNumber": "Мемлекеттік нөмір",
+      "selectServices": "Қызметтерді таңдау",
+      "notes": "Ескертпелер",
+      "save": "Сақтау",
+      "cancel": "Болдырмау"
+    }
+  },
+  "clients": {
+    "title": "Клиенттер",
+    "subtitle": "Клиенттік база",
+    "add": "Клиент қосу",
+    "search": "Іздеу...",
+    "visits": "келу",
+    "phone": "Телефон",
+    "car": "Автомобиль",
+    "lastVisit": "Соңғы келу",
+    "totalSpent": "Жалпы сома"
+  },
+  "analytics": {
+    "title": "Аналитика",
+    "subtitle": "Статистика және есептер",
+    "period": {
+      "today": "Бүгін",
+      "week": "Апта",
+      "month": "Ай",
+      "year": "Жыл"
+    },
+    "revenue": "Табыс",
+    "orders": "Тапсырыстар",
+    "newClients": "Жаңа клиенттер",
+    "avgCheck": "Орташа чек",
+    "topServices": "Топ қызметтер",
+    "masterWorkload": "Шеберлердің жүктемесі"
+  },
+  "shifts": {
+    "title": "Ауысымдар",
+    "subtitle": "Ауысымдарды басқару",
+    "current": "Ағымдағы ауысым",
+    "history": "Ауысымдар тарихы",
+    "employee": "Қызметкер",
+    "date": "Күні",
+    "time": "Уақыт",
+    "ordersProcessed": "Орындалған тапсырыстар",
+    "revenue": "Табыс",
+    "open": "Ашу",
+    "close": "Жабу"
+  },
+  "settings": {
+    "title": "Баптаулар",
+    "subtitle": "Сервис конфигурациясы",
+    "serviceName": "Сервис атауы",
+    "serviceNamePlaceholder": "Менің автосервисім",
+    "address": "Мекенжай",
+    "addressPlaceholder": "Алматы қ., Абай даңғылы 1",
+    "phone": "Телефон",
+    "phonePlaceholder": "+7 (___) ___-__-__",
+    "workplaces": "Жұмыс орындары саны",
+    "workingHours": "Жұмыс уақыты",
+    "from": "бастап",
+    "to": "дейін",
+    "notifications": "Хабарландырулар",
+    "newOrders": "Жаңа тапсырыстар туралы хабарлау",
+    "completedOrders": "Аяқталған тапсырыстар туралы хабарлау",
+    "save": "Сақтау"
+  },
+  "common": {
+    "save": "Сақтау",
+    "cancel": "Болдырмау",
+    "delete": "Жою",
+    "edit": "Өңдеу",
+    "add": "Қосу",
+    "search": "Іздеу",
+    "filter": "Сүзгі",
+    "export": "Экспорт",
+    "import": "Импорт",
+    "loading": "Жүктелуде...",
+    "error": "Қате",
+    "success": "Сәтті",
+    "confirm": "Растау",
+    "yes": "Иә",
+    "no": "Жоқ"
+  }
+}
