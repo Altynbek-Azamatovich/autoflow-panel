@@ -9,6 +9,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
 import { Loader2 } from "lucide-react";
+import { getSafeErrorMessage } from "@/lib/errorHandler";
 
 export default function Settings() {
   const { t } = useTranslation();
@@ -53,7 +54,7 @@ export default function Settings() {
         });
       }
     } catch (error: any) {
-      toast.error(error.message);
+      toast.error(getSafeErrorMessage(error));
     }
   };
 
@@ -71,7 +72,7 @@ export default function Settings() {
       if (error) throw error;
       toast.success(t("settings.save"));
     } catch (error: any) {
-      toast.error(error.message);
+      toast.error(getSafeErrorMessage(error));
     } finally {
       setLoading(false);
     }

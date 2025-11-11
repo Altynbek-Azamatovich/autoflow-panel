@@ -138,7 +138,7 @@ export function OrderDialog({ open, onOpenChange, order, onSuccess }: OrderDialo
       onSuccess();
       onOpenChange(false);
     } catch (error: any) {
-      toast.error(error.message);
+      toast.error(getSafeErrorMessage(error));
     } finally {
       setLoading(false);
     }

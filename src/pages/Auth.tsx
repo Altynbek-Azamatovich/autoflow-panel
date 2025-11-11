@@ -7,8 +7,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
-import { Wrench } from "lucide-react";
+import { Wrench, AlertTriangle } from "lucide-react";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { getSafeErrorMessage } from "@/lib/errorHandler";
 
 export default function Auth() {
   const navigate = useNavigate();
@@ -17,6 +18,9 @@ export default function Auth() {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [failedAttempts, setFailedAttempts] = useState(0);
+  const [isLocked, setIsLocked] = useState(false);
+  const [lockoutTime, setLockoutTime] = useState<number | null>(null);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -43,6 +47,14 @@ export default function Auth() {
 
   const handleAuth = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Check if account is locked
+    if (isLocked) {
+      const remainingTime = lockoutTime ? Math.ceil((lockoutTime - Date.now()) / 1000) : 0;
+      toast.error(`Слишком много попыток входа. Попробуйте через ${remainingTime} секунд.`);
+      return;
+    }
+    
     setLoading(true);
 
     try {
@@ -55,7 +67,26 @@ export default function Auth() {
           password,
         });
 
-        if (error) throw error;
+        if (error) {
+          const newAttempts = failedAttempts + 1;
+          setFailedAttempts(newAttempts);
+          
+          if (newAttempts >= 5) {
+            setIsLocked(true);
+            const unlockTime = Date.now() + 300000; // 5 minutes
+            setLockoutTime(unlockTime);
+            setTimeout(() => {
+              setIsLocked(false);
+              setFailedAttempts(0);
+              setLockoutTime(null);
+            }, 300000);
+            toast.error("Аккаунт заблокирован на 5 минут из-за множественных неудачных попыток входа.");
+          }
+          throw error;
+        }
+        
+        // Reset failed attempts on success
+        setFailedAttempts(0);
         toast.success(t("auth.welcome"));
       } else {
         const { error: signUpError } = await supabase.auth.signUp({
@@ -95,7 +126,7 @@ export default function Auth() {
         toast.success(t("auth.signupSuccess"));
       }
     } catch (error: any) {
-      toast.error(error.message || t("common.error"));
+      toast.error(getSafeErrorMessage(error));
     } finally {
       setLoading(false);
     }
@@ -152,10 +183,22 @@ export default function Auth() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  minLength={6}
+                  minLength={8}
                   className="bg-secondary border-border"
                 />
+                {!isLogin && (
+                  <p className="text-xs text-muted-foreground">
+                    Минимум 8 символов
+                  </p>
+                )}
               </div>
+              
+              {isLogin && failedAttempts > 0 && !isLocked && (
+                <div className="flex items-center gap-2 text-sm text-amber-600 bg-amber-50 dark:bg-amber-950/20 p-2 rounded">
+                  <AlertTriangle className="h-4 w-4" />
+                  <span>Неудачных попыток: {failedAttempts}/5</span>
+                </div>
+              )}
               <Button
                 type="submit"
                 className="w-full bg-gradient-to-r from-primary to-blue-600 hover:opacity-90"

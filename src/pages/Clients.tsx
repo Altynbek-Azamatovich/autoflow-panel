@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { ClientDialog } from "@/components/clients/ClientDialog";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
+import { getSafeErrorMessage } from "@/lib/errorHandler";
 
 export default function Clients() {
   const { t } = useTranslation();
@@ -34,8 +35,18 @@ export default function Clients() {
 
       if (error) throw error;
       setClients(data || []);
+      
+      // Audit logging for bulk client data access
+      if (data && data.length > 50) {
+        await supabase.from("audit_logs").insert({
+          user_id: session.user.id,
+          action: "BULK_CLIENT_VIEW",
+          table_name: "clients",
+          record_count: data.length,
+        }).catch(err => console.error("Audit log error:", err));
+      }
     } catch (error: any) {
-      toast.error(error.message);
+      toast.error(getSafeErrorMessage(error));
     } finally {
       setLoading(false);
     }
